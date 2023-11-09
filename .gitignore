@@ -130,4 +130,4 @@ dist
 .pnp.*
 
 # .vscode/launch.json for run/debug in vscode
-.vscode
+.vscode/launch.json
