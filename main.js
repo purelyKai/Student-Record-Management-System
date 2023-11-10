@@ -1,6 +1,6 @@
 const { app, BrowserWindow } = require('electron')
 
-if (require('electron-squirrel-startup')) app.quit();
+//if (require('electron-squirrel-startup')) app.quit();
 
 const createWindow = () => {
   const win = new BrowserWindow({
@@ -9,7 +9,7 @@ const createWindow = () => {
     icon: './SL-logo'
   })
 
-  win.loadFile('./WebPages/Login.html')
+  win.loadFile('./Page_Login/Login.html')
 }
 
 app.whenReady().then(() => {
