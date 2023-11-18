@@ -1,7 +1,0 @@
-div#studentProfilesBox{
-    float: left; width: 20%; /*Really small for now because it makes the buttons more sequential. Clean up later when the buttons are full of data*/
-}
-
-div#SearchModifiers{
-    float: right; width: 50%;
-}
