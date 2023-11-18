@@ -9,7 +9,7 @@ const createWindow = () => {
     icon: './SL-logo'
   })
 
-  win.loadFile('./Page_Login/Login.html')
+  win.loadFile('./Login_Page/Login.html')
 }
 
 app.whenReady().then(() => {
