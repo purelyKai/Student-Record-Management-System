@@ -1,3 +1,4 @@
+/*
 body{
     background-image: none;
     margin:auto;
@@ -19,7 +20,7 @@ main {
 footer {
     background-color:white;
 }
-/* if we use a navigation bar at the top of each page */
+/* if we use a navigation bar at the top of each page *//*
 nav {
     display: flex;
     justify-content: center;
@@ -65,3 +66,4 @@ p {
     justify-content: center;
     text-align: center;
 }
+*/

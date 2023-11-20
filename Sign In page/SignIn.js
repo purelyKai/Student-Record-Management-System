@@ -31,9 +31,9 @@ document.addEventListener('DOMContentLoaded', function () {
                                                        -> if different, then say wrong password
     */
     // temp logic for navigation
-    //window.location.href = '../Main Dashboard page/MainDashboardStudent.html';
+    window.location.href = '../Main Dashboard page/MainDashboardStudent.html';
     //window.location.href = '../Main Dashboard page/MainDashboardProfessor.html';
-    window.location.href = '../Main Dashboard page/MainDashboardAdmin.html';
+    //window.location.href = '../Main Dashboard page/MainDashboardAdmin.html';
   });
 
   // Add event listener to the Change Password form
