@@ -1,19 +1,24 @@
-// Get elements
-const backupButton = document.getElementById('backup-button');
-const recoveryButton = document.getElementById('recovery-button');
+document.addEventListener('DOMContentLoaded', function () {
+    // Get elements
+    const backupButton = document.getElementById('backup-button');
+    const recoveryButton = document.getElementById('recovery-button');
+    const goBackButton = document.getElementById('go-back-button');
 
-// Add event listeners for when backup and recovery buttons are clicked
-backupButton.addEventListener('click', backup);
-recoveryButton.addEventListener('click', recover);
+    // Add event listeners for when backup, recovery, and go back buttons are clicked
+    backupButton.addEventListener('click', backup);
+    recoveryButton.addEventListener('click', recover);
+    goBackButton.addEventListener('click', goBack);
 
-function backup() {
-    // Implement backup logic here
-    console.log('Backup initiated');
-    // Add more functionality as needed
-}
+    function backup() {
+        // Implement backup logic here
+    }
 
-function recover() {
-    // Implement recovery logic here
-    console.log('Recovery initiated');
-    // Add more functionality as needed
-}
+    function recover() {
+        // Implement recovery logic here
+    }
+
+    function goBack() {
+        // Go back to the previous page
+        history.back();
+    }
+});
