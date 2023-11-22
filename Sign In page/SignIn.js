@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var username = document.getElementById('signInUsername').value;
     var password = document.getElementById('signInPassword').value;
 
-    // Perform your Sign In logic here
+    // Perform sign in logic here
     /* 
     search username from database -> compare passwords -> if the same, then evaluate role and link to correct dashboard
                                                        -> if different, then say wrong password
@@ -50,30 +50,3 @@ document.addEventListener('DOMContentLoaded', function () {
     */
   });
 });
-
-
-
-/* EXTRA EXTRA EXTRA
-
-///Allow user to log into their account using information imported from Class Structure
-
-function AccessAccount(){
-    //Log in to appropriate user accout input into login fields
-      var UsernameInput = document.getElementById("Username").value;
-      var PasswordInput = document.getElementById("Password").value;
-  
-      for (let i=0; i<AccountTable.length; i++){
-          if (AccountTable[i].Username == UsernameInput){
-              if (AccountTable[i].Password == PasswordInput){
-                  console.log("Login sucess!");
-                  location.href="../Dashboard_page/HomeScreen.html";
-              }
-              else{
-                  break;
-              }
-          }
-  
-          console.warn("WRONG AGAIN");
-      }
-  }
-*/
