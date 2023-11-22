@@ -1,29 +1,51 @@
-const { app, BrowserWindow } = require('electron')
+const { app, BrowserWindow, ipcMain } = require('electron');
+const path = require('path');
+const userManagement = require('./Class Implementations/Users');
+const courseManagement = require('./Class Implementations/Courses');
 
-if (require('electron-squirrel-startup')) { app.quit() }
+let mainWindow;
 
 const createWindow = () => {
-  const win = new BrowserWindow({
+  mainWindow = new BrowserWindow({
     width: 1920,
     height: 1080,
     icon: './SL-logo',
-  })
+    webPreferences: {
+      nodeIntegration: true,
+      contextIsolation: false,
+    }
+  });
 
-  win.loadFile('Sign In page/SignIn.html')
+  mainWindow.loadFile('Sign In page/SignIn.html');
 }
 
+// Expose a function to read the user file
+ipcMain.handle('read-users-file', () => {
+  return userManagement.readUsersFile();
+});
+
 app.whenReady().then(() => {
-  createWindow()
+  createWindow();
 
   app.on('activate', () => {
     if (BrowserWindow.getAllWindows().length === 0) {
-      createWindow()
+      createWindow();
     }
-  })
-})
+  });
+});
 
 app.on('window-all-closed', () => {
   if (process.platform !== 'darwin') {
-    app.quit()
+    // Save the current state before quitting
+    userManagement.saveUsersToFile(userManagement.readUsersFile());
+    courseManagement.saveCoursesToFile(courseManagement.readCoursesFile());
+    app.quit();
   }
-})
+});
+
+// Handle the app quitting on macOS
+app.on('before-quit', () => {
+  // Save the current state before quitting
+  userManagement.saveUsersToFile(userManagement.readUsersFile());
+  courseManagement.saveCoursesToFile(courseManagement.readCoursesFile());
+});
