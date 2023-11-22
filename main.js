@@ -19,11 +19,6 @@ const createWindow = () => {
   mainWindow.loadFile('Sign In page/SignIn.html');
 }
 
-// Expose a function to read the user file
-ipcMain.handle('read-users-file', () => {
-  return userManagement.readUsersFile();
-});
-
 app.whenReady().then(() => {
   createWindow();
 
@@ -48,4 +43,17 @@ app.on('before-quit', () => {
   // Save the current state before quitting
   userManagement.saveUsersToFile(userManagement.readUsersFile());
   courseManagement.saveCoursesToFile(courseManagement.readCoursesFile());
+});
+
+// IPC event to read the user file
+ipcMain.handle('read-users-file', () => {
+  return userManagement.readUsersFile();
+});
+
+// IPC event for course creation
+ipcMain.on('create-course', (event, courseData) => {
+  const createdCourse = courseManagement.createCourse(courseData);
+
+  // Send the created course back to the renderer process
+  event.sender.send('course-created', createdCourse);
 });
