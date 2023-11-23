@@ -90,7 +90,10 @@ class Student extends UserWithProfile {
         }
     }
 
-    // Getters for accessing each course, grades and attendance restricted to this student
+    // Getter for accessing the list of courses
+    getCourses() {
+        return this.courses;
+    }
 }
 
 // Subclass for Professor
@@ -101,7 +104,28 @@ class Professor extends UserWithProfile {
         this.courses = []; // Property to store references to courses
     }
 
-    // Getters & Setters for accessing each course
+    // Getter for accessing the list of courses
+    getCourses() {
+        return this.courses;
+    }
+
+    // Setters for accessing each course
+    setCourses(newCourses) {
+        this.courses = newCourses;
+    }
+
+    // Add a course the professor is teaching
+    addCourse(course) {
+        this.courses.push(course);
+    }
+
+    // Remove a course from the professor's records
+    removeCourse(course) {
+        const index = this.courses.indexOf(course);
+        if (index !== -1) {
+            this.courses.splice(index, 1);
+        }
+    }
 }
 
 // Subclass for School Administrator
