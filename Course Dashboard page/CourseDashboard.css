@@ -1,0 +1,25 @@
+nav {
+    text-align: center;
+    margin-top: 20px;
+    border-color: black;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    margin: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #333;
+}
+
+nav a:hover {
+    background-color: #ddd;
+}

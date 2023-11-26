@@ -4,17 +4,16 @@ body {
 }
 
 table {
-    width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    width: 100%;
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 1px solid #dddddd;
     text-align: left;
+    padding: 8px;
 }
 
 th {
-    background-color: orange;
+    background-color: #f2f2f2;
 }

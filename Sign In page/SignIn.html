@@ -9,15 +9,28 @@
     <title>Sign In Page</title>
 </head>
 <body>
+    <header>
+        <h1 class="site-title"><a>Sign In</a></h1>
+        <!-- unsure if go back button is needed  -->
+        <div class="go-back-button-container">
+            <!-- Go back Button -->
+            <button type="button" id="go-back-button">Go back</button>
+        </div>
+      </header>
+
     <div>
-        <h2>Sign In</h2>
+        <h3>Sign In</h3>
         <form id="signInForm" action="#" method="post">
             <label for="signInUsername">Username:</label>
             <input type="text" id="signInUsername" name="username" required>
 
             <label for="signInPassword">Password:</label>
             <input type="password" id="signInPassword" name="password" required>
-            <input type="checkbox" id="showPassword"> Show Password
+            
+            <label>
+                <input type="checkbox" id="showChangePassword">Show Password
+            </label>
+            <!-- <input type="checkbox" id="showPassword"> Show Password -->
 
             <button type="submit">Sign In</button>
         </form>
@@ -29,7 +42,12 @@
 
             <label for="changePasswordPassword">Password:</label>
             <input type="password" id="changePasswordPassword" name="password" required>
-            <input type="checkbox" id="showChangePassword"> Show Password
+
+            <label>
+                <input type="checkbox" id="showChangePassword">Show Password
+            </label>
+
+            <!-- <input type="checkbox" id="showChangePassword"> Show Password -->
 
             <button type="submit">Change Password</button>
         </form>

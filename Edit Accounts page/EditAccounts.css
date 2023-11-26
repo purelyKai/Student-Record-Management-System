@@ -3,6 +3,10 @@ body {
     margin: 20px;
 }
 
+button {
+    margin: 10px 10px;
+}
+
 table {
     width: 100%;
     border-collapse: collapse;
