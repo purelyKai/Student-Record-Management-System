@@ -1,0 +1,107 @@
+<!--
+  To be integrated into Professor's Dashboard.
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="CreateCourse.css">
+    <script src="CreateCourse.js"></script>
+    <title>Create Course</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="site-title"><a>Create Course</a></h1>
+      <div class="go-back-button-container">
+          <!-- Go back Button -->
+          <button type="button" id="go-back-button">Go back</button>
+      </div>
+    </header>
+
+    <button type="button" id="make-course-button"><i class="fas fa-plus"></i></button> <!--Overlay button on Professor's Dashboard. Pressing displays overlay below.-->
+
+    <div id="modal-backdrop" class="hidden"></div>
+    <div id="make-course-modal" class="hidden">
+      <div class="modal-dialog">
+
+        <div class="modal-header">
+          <h3>Create a new course</h3>
+          <button type="button" id="modal-close" class="modal-hide-button">&times;</button>
+        </div>
+
+        <div class="modal-body">
+
+          <div class="course-input-element">
+            <label for="course-text-input">Course name:</label>
+            <input type="text" id="course-text-input"></input>
+          </div>
+
+          <div class="course-input-element">
+            <label for="startDate">Start Date:</label>
+            <input type="date" id="startDate"></input>
+
+            <label for="endDate">End Date:</label>
+            <input type="date" id="endDate">
+          </div>
+
+          <div class="course-input-element">
+            <fieldset id="course-condition-fieldset" class="course-fieldset">
+              <legend>Days of the Week:</legend>
+              <div>
+                <input type="checkbox" name="course-condition" id="course-condition-Sunday" value="Sunday">
+                <label for="course-condition-Sunday">Sunday</label>
+              </div>
+              <div>
+                <input type="checkbox" name="course-condition" id="course-condition-Monday" value="Monday">
+                <label for="course-condition-Monday">Monday</label>
+              </div>
+              <div>
+                <input type="checkbox" name="course-condition" id="course-condition-Tuesday" value="Tuesday">
+                <label for="course-condition-Tuesday">Tuesday</label>
+              </div>
+              <div>
+                <input type="checkbox" name="course-condition" id="course-condition-Wednesday" value="Wednesday">
+                <label for="course-condition-Wednesday">Wednesday</label>
+              </div>
+              <div>
+                <input type="checkbox" name="course-condition" id="course-condition-Thursday" value="Thursday">
+                <label for="course-condition-Thursday">Thursday</label>
+              </div>
+              <div>
+                <input type="checkbox" name="course-condition" id="course-condition-Friday" value="Friday">
+                <label for="course-condition-Friday">Friday</label>
+              </div>
+              <div>
+                <input type="checkbox" name="course-condition" id="course-condition-Saturday" value="Saturday">
+                <label for="course-condition-Saturday">Saturday</label>
+              </div>
+            </fieldset>
+          </div>
+
+          <div class="course-input-element">
+            <label for="startTime">Course Start Time:</label>
+            <input type="time" id="startTime">
+
+            <label for="endTime">Course End Time:</label>
+            <input type="time" id="endTime"></input>
+          </div>
+
+          <div class="course-input-element"> <!--Optional field for inputing specific exam dates/times. User should be able to make multiple.-->
+            <label for="dateTime">Select Date and Time:</label>
+            <input type="datetime-local" id="dateTime">
+          </div>
+
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" id="modal-cancel" class="modal-hide-button action-button">Cancel</button>
+          <button type="button" id="modal-accept" class="action-button">Create Course</button>
+        </div>
+
+      </div>
+    </div>
+
+  </body>
+</html>
