@@ -1,0 +1,21 @@
+[
+  {
+    "courseName": "Software Engineering",
+    "id": "S858",
+    "startDate": "2023-01-08",
+    "endDate": "2023-03-22",
+    "daysOfTheWeek": [
+      "Monday",
+      "Wednesday",
+      "Friday"
+    ],
+    "startTime": "09:00 AM",
+    "endTime": "11:00 AM",
+    "optionalMeetingDate": null,
+    "optionalMeetingTime": null,
+    "students": [],
+    "grades": {},
+    "attendanceRecords": {},
+    "professor": null
+  }
+]

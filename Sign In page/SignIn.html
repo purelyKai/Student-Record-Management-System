@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="SignIn.css">
+    <script src="SignIn.js"></script>
+    <title>Sign In Page</title>
+</head>
+<body>
+    <div>
+        <h2>Sign In</h2>
+        <form id="signInForm" action="#" method="post">
+            <label for="signInUsername">Username:</label>
+            <input type="text" id="signInUsername" name="username" required>
+
+            <label for="signInPassword">Password:</label>
+            <input type="password" id="signInPassword" name="password" required>
+            <input type="checkbox" id="showPassword"> Show Password
+
+            <button type="submit">Sign In</button>
+        </form>
+
+        <h3>Change Password</h3>
+        <form id="changePasswordForm" action="#" method="post">
+            <label for="changePasswordUsername">Username:</label>
+            <input type="text" id="changePasswordUsername" name="username" required>
+
+            <label for="changePasswordPassword">Password:</label>
+            <input type="password" id="changePasswordPassword" name="password" required>
+            <input type="checkbox" id="showChangePassword"> Show Password
+
+            <button type="submit">Change Password</button>
+        </form>
+    </div>
+</body>
+</html>
