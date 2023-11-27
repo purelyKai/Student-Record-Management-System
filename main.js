@@ -1,5 +1,4 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
-const path = require('path');
 const userManagement = require('./Class Implementations/Users');
 const courseManagement = require('./Class Implementations/Courses');
 
