@@ -4,6 +4,10 @@ const courseManagement = require('./Class Implementations/Courses');
 
 let mainWindow;
 
+// Global variables to hold signed in user and selected course for course-specific actions
+global.signedInUser = null;
+global.currentSelectedCourse = null;
+
 const createWindow = () => {
   mainWindow = new BrowserWindow({
     width: 1920,
@@ -42,6 +46,11 @@ app.on('before-quit', () => {
   // Save the current state before quitting
   userManagement.saveUsersToFile(userManagement.readUsersFile());
   courseManagement.saveCoursesToFile(courseManagement.readCoursesFile());
+});
+
+// IPC event to update the signed-in user
+ipcMain.on('update-signed-in-user', (event, newUser) => {
+  global.signedInUser = newUser;
 });
 
 // IPC event to read the user file
