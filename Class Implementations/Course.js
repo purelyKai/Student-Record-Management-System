@@ -1,6 +1,6 @@
 // Class for a course
 class Course {
-    constructor(courseName, startDate, endDate, daysOfTheWeek, startTime, endTime, optionalMeetingDate = null, optionalMeetingTime = null) {
+    constructor(courseName, startDate, endDate, daysOfTheWeek, startTime, endTime, optionalMeetingDate = null, optionalMeetingTime = null, professorID) {
         this.courseName = courseName;
         this.id = this.generateCourseId(); // Some standard format based on course name
         this.startDate = startDate;
@@ -10,14 +10,13 @@ class Course {
         this.endTime = endTime;
         this.optionalMeetingDate = optionalMeetingDate;
         this.optionalMeetingTime = optionalMeetingTime;
+        // Reference to the professor who runs the course
+        this.professorID = professorID;
 
         // Initialize empty lists for students, grades, and attendance records
         this.students = [];
         this.grades = new Map(); // Map to store grades with student as the key
         this.attendanceRecords = new Map(); // Map to store attendance records with student as the key
-
-        // Reference to the professor who runs the course
-        this.professor = null;
     }
 
     // Getter functions
