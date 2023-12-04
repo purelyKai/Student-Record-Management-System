@@ -54,7 +54,9 @@
     "interests": null,
     "hobbies": null,
     "skills": null,
-    "courses": []
+    "courses": [
+      "S858"
+    ]
   },
   {
     "role": "Professor",
@@ -71,7 +73,7 @@
     "skills": null,
     "courses": [
       "I953",
-      "P747"
+      "P787"
     ]
   }
 ]
