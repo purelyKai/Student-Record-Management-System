@@ -1,9 +1,6 @@
 // Used to invoke functions in main process rather than renderer process
 const { ipcRenderer } = require('electron');
 
-// Access the signed-in user
-const signedInUser = window.signedInUser;
-
 const displayUsers = async () => {
     const tableBody = document.getElementById('userTable').getElementsByTagName('tbody')[0];
     tableBody.innerHTML = '';
