@@ -107,6 +107,10 @@ ipcMain.on('add-user', (event, role, firstName, lastName, email, dateOfBirth) =>
 });
 
 // IPC event for course creation
-ipcMain.on('create-course', (event, courseData) => {
-  const createdCourse = courseManagement.createCourse(courseData);
+ipcMain.on('create-course', (event, courseName, startDate, endDate, daysOfWeek, startTime, endTime, optionalMeetingDate, optionalMeetingTime) => {
+  var course;
+
+  course = new Course(courseName, startDate, endDate, daysOfWeek, startTime, endTime, optionalMeetingDate, optionalMeetingTime, global.signedInUser.id);
+
+  courseManagement.addCourse(course);
 });
