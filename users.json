@@ -38,5 +38,20 @@
     "id": "JW2544",
     "email": "admin@example.com",
     "dateOfBirth": "1975-10-30"
+  },
+  {
+    "role": "Student",
+    "firstName": "Paige",
+    "lastName": "Douglas",
+    "username": "douglaspaige",
+    "password": "l1ipzwj6yq",
+    "id": "PD8550",
+    "email": "douglaspaige@oregonstate.edu",
+    "dateOfBirth": "2002-02-02",
+    "preferredName": null,
+    "interests": null,
+    "hobbies": null,
+    "skills": null,
+    "courses": []
   }
 ]

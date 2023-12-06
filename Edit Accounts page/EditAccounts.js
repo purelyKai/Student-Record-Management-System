@@ -33,11 +33,9 @@ const displayUsers = async () => {
     }
 };
 
-const addUser = async (role, firstName, lastName, email, dateOfBirth) => {
+const addUser = (role, firstName, lastName, email, dateOfBirth) => {
     try {
-        const result = await ipcRenderer.invoke('create-user', role, firstName, lastName, email, dateOfBirth);
-        // Do something with the result if needed
-        console.log('User created:', result);
+        ipcRenderer.send('add-user', role, firstName, lastName, email, dateOfBirth);
     } catch (error) {
         console.error('Error creating user:', error);
     }
@@ -64,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = document.getElementById('email').value;
         const dateOfBirth = document.getElementById('dateOfBirth').value;
 
-        await addUser(role, firstName, lastName, email, dateOfBirth);
+        addUser(role, firstName, lastName, email, dateOfBirth);
         displayUsers();
     })
 });

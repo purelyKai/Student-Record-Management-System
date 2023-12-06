@@ -21,7 +21,7 @@ function saveUsersToFile(users) {
     }
 }
 
-function createUser(user) {
+function addUser(user) {
     const users = readUsersFile();
     users.push(user);
     saveUsersToFile(users);
@@ -47,7 +47,7 @@ function removeUser(userId) {
 module.exports = {
     readUsersFile,
     saveUsersToFile,
-    createUser,
+    addUser,
     editUser,
     removeUser
 };

@@ -1,6 +1,8 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const userManagement = require('./Class Implementations/Users');
 const courseManagement = require('./Class Implementations/Courses');
+const { Student, Professor, SchoolAdministrator } = require('./Class Implementations/User');
+const { Course } = require('./Class Implementations/Course');
 
 let mainWindow;
 
@@ -83,17 +85,28 @@ ipcMain.on('save-courses-file', (event, courses) => {
 });
 
 // IPC event for user creation
-ipcMain.on('create-user', (event, userData) => {
-  const createdUser = userManagement.createUser(userData);
+ipcMain.on('add-user', (event, role, firstName, lastName, email, dateOfBirth) => {
+  var user;
 
-  // Send the created user back to the renderer process
-  event.sender.send('user-created', createdUser);
+  switch (role.toLowerCase()) {
+    case "student":
+      user = new Student(role, firstName, lastName, email, dateOfBirth);
+      break;
+    case "professor":
+      user = new Professor(role, firstName, lastName, email, dateOfBirth);
+      break;
+    case "administrator":
+      user = new SchoolAdministrator(role, firstName, lastName, email, dateOfBirth);
+      break;
+    default:
+      console.error("Invalid role entered");
+      return;
+  }
+
+  userManagement.addUser(user);
 });
 
 // IPC event for course creation
 ipcMain.on('create-course', (event, courseData) => {
   const createdCourse = courseManagement.createCourse(courseData);
-
-  // Send the created course back to the renderer process
-  event.sender.send('course-created', createdCourse);
 });
