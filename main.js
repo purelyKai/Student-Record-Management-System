@@ -1,7 +1,6 @@
 const { app, BrowserWindow, ipcMain } = require('electron');
 const userManagement = require('./Class Implementations/Users');
 const courseManagement = require('./Class Implementations/Courses');
-const { Student, Professor, SchoolAdministrator } = require('./Class Implementations/User');
 
 let mainWindow;
 
