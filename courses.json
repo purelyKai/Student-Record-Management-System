@@ -13,9 +13,45 @@
     "endTime": "11:00 AM",
     "optionalMeetingDate": null,
     "optionalMeetingTime": null,
+    "professorID": "JS8031",
     "students": [],
     "grades": {},
-    "attendanceRecords": {},
-    "professor": null
+    "attendanceRecords": {}
+  },
+  {
+    "courseName": "Operating Systems",
+    "id": "O93",
+    "startDate": "2023-01-08",
+    "endDate": "2023-03-22",
+    "daysOfTheWeek": [
+      "Monday",
+      "Wednesday"
+    ],
+    "startTime": "09:00 AM",
+    "endTime": "11:00 AM",
+    "optionalMeetingDate": null,
+    "optionalMeetingTime": null,
+    "professorID": "JS8031",
+    "students": [],
+    "grades": {},
+    "attendanceRecords": {}
+  },
+  {
+    "courseName": "Web Development",
+    "id": "W713",
+    "startDate": "2023-01-12",
+    "endDate": "2023-03-28",
+    "daysOfTheWeek": [
+      "Tuesday",
+      "Thursday"
+    ],
+    "startTime": "12:00",
+    "endTime": "14:00",
+    "optionalMeetingDate": null,
+    "optionalMeetingTime": null,
+    "professorID": "JS8031",
+    "students": [],
+    "grades": {},
+    "attendanceRecords": {}
   }
 ]

@@ -53,5 +53,20 @@
     "hobbies": null,
     "skills": null,
     "courses": []
+  },
+  {
+    "role": "Student",
+    "firstName": "Payton",
+    "lastName": "Carter",
+    "username": "carterpayton",
+    "password": "612ia3mc1w",
+    "id": "PC4790",
+    "email": "carterpayton@oregonstate.edu",
+    "dateOfBirth": "2001-01-01",
+    "preferredName": null,
+    "interests": null,
+    "hobbies": null,
+    "skills": null,
+    "courses": []
   }
 ]
