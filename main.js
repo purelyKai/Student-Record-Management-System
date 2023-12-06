@@ -48,14 +48,36 @@ app.on('before-quit', () => {
   courseManagement.saveCoursesToFile(courseManagement.readCoursesFile());
 });
 
+/*
+ IPC events
+*/
+
 // IPC event to update the signed-in user
-ipcMain.on('update-signed-in-user', (event, newUser) => {
-  global.signedInUser = newUser;
+ipcMain.on('update-signed-in-user', (event, aUser) => {
+  global.signedInUser = aUser;
 });
 
-// IPC event to read the user file
+// IPC event to update the currently selected course
+ipcMain.on('update-signed-in-user', (event, aCourse) => {
+  global.currentSelectedCourse = aCourse;
+});
+
+// IPC event to read the users file
 ipcMain.handle('read-users-file', () => {
   return userManagement.readUsersFile();
+});
+
+// IPC event to read the courses file
+ipcMain.handle('read-courses-file', () => {
+  return courseManagement.readCoursesFile();
+});
+
+// IPC event for user creation
+ipcMain.on('create-user', (event, userData) => {
+  const createdUser = userManagement.createUser(userData);
+
+  // Send the created user back to the renderer process
+  event.sender.send('user-created', createdUser);
 });
 
 // IPC event for course creation
