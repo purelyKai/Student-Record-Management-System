@@ -7,16 +7,36 @@ button {
     margin: 10px 10px;
 }
 
-table {
+form {
+    max-width: 250px;
+    margin: 10px auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+input {
     width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+table {
     border-collapse: collapse;
-    margin-bottom: 20px;
+    width: 100%;
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 1px solid #dddddd;
     text-align: left;
+    padding: 8px;
 }
 
 th {

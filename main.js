@@ -72,18 +72,42 @@ ipcMain.handle('read-courses-file', () => {
   return courseManagement.readCoursesFile();
 });
 
-// IPC event for user creation
-ipcMain.on('create-user', (event, userData) => {
-  const createdUser = userManagement.createUser(userData);
+// IPC event to save the users file
+ipcMain.on('save-users-file', (event, users) => {
+  userManagement.saveUsersToFile(users);
+});
 
-  // Send the created user back to the renderer process
-  event.sender.send('user-created', createdUser);
+// IPC event to save the courses file
+ipcMain.on('save-courses-file', (event, courses) => {
+  courseManagement.saveCoursesToFile(courses);
+});
+
+// IPC event for user creation
+ipcMain.on('create-user', (event, { role, firstName, lastName, email, dateOfBirth }) => {
+  var user;
+
+  switch (role.toLowerCase()) {
+      case "student":
+          user = new Student(firstName, lastName, email, dateOfBirth);
+          break;
+
+      case "professor":
+          user = new Professor(firstName, lastName, email, dateOfBirth);
+          break;
+
+      case "administrator":
+          user = new SchoolAdministrator(firstName, lastName, email, dateOfBirth);
+          break;
+
+      default:
+          console.error("Invalid role entered");
+          return;
+  }
+
+  userManagement.createUser(user);
 });
 
 // IPC event for course creation
 ipcMain.on('create-course', (event, courseData) => {
-  const createdCourse = courseManagement.createCourse(courseData);
-
-  // Send the created course back to the renderer process
-  event.sender.send('course-created', createdCourse);
+  courseManagement.createCourse(courseData);
 });
