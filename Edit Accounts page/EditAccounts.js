@@ -5,8 +5,10 @@ const { ipcRenderer } = require('electron');
 const signedInUser = window.signedInUser;
 
 const displayUsers = async () => {
-    const users = await ipcRenderer.invoke('read-users-file');
     const tableBody = document.getElementById('userTable').getElementsByTagName('tbody')[0];
+    tableBody.innerHTML = '';
+
+    const users = await ipcRenderer.invoke('read-users-file');
 
     for (const user of users) {
         const newRow = tableBody.insertRow(tableBody.rows.length);
@@ -32,11 +34,18 @@ const displayUsers = async () => {
 };
 
 const addUser = async (role, firstName, lastName, email, dateOfBirth) => {
-    await ipcRenderer.invoke('create-user', { role, firstName, lastName, email, dateOfBirth });
+    try {
+        const result = await ipcRenderer.invoke('create-user', role, firstName, lastName, email, dateOfBirth);
+        // Do something with the result if needed
+        console.log('User created:', result);
+    } catch (error) {
+        console.error('Error creating user:', error);
+    }
 };
 
 document.addEventListener('DOMContentLoaded', function () {
     const goBackButton = document.getElementById('go-back-button');
+    const signInForm = document.getElementById('addUserForm');
 
     goBackButton.addEventListener('click', function () {
         // Go back to the previous page
@@ -55,7 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const email = document.getElementById('email').value;
         const dateOfBirth = document.getElementById('dateOfBirth').value;
 
-        addUser(role, firstName, lastName, email, dateOfBirth);
+        await addUser(role, firstName, lastName, email, dateOfBirth);
         displayUsers();
     })
 });
