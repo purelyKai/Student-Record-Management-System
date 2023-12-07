@@ -53,5 +53,24 @@
     "students": [],
     "grades": {},
     "attendanceRecords": {}
+  },
+  {
+    "courseName": "Linear Algebra",
+    "id": "L588",
+    "startDate": "2023-04-02",
+    "endDate": "2023-06-22",
+    "daysOfTheWeek": [
+      "Tuesday",
+      "Thursday",
+      "Friday"
+    ],
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "optionalMeetingDate": "2023-06-20",
+    "optionalMeetingTime": "18:00",
+    "professorID": "SR655",
+    "students": [],
+    "grades": {},
+    "attendanceRecords": {}
   }
 ]

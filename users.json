@@ -68,5 +68,20 @@
     "hobbies": null,
     "skills": null,
     "courses": []
+  },
+  {
+    "role": "Professor",
+    "firstName": "Samuel",
+    "lastName": "Rundel",
+    "username": "rundelsamuel",
+    "password": "d2ls5fttx4",
+    "id": "SR655",
+    "email": "rundelsamuel@example.com",
+    "dateOfBirth": "2001-01-01",
+    "preferredName": null,
+    "interests": null,
+    "hobbies": null,
+    "skills": null,
+    "courses": []
   }
 ]
