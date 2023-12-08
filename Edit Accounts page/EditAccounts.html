@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles.css">
+    <link rel="stylesheet" href="EditAccounts.css">
+    <script src="EditAccounts.js"></script>
+    <title>Edit Accounts</title>
+</head>
+<body>
+    <header>
+        <h1 class="site-title"><a>Edit Accounts</a></h1>
+        <div class="go-back-button-container">
+            <!-- Go back Button -->
+            <button type="button" id="go-back-button">Go back</button>
+        </div>
+    </header>
+
+    <!-- Form for adding a new user -->
+    <form id="addUserForm">
+        <label for="role">Role:</label>
+        <input type="text" id="role" name="role" required>
+        <br>
+        <label for="firstName">First Name:</label>
+        <input type="text" id="firstName" name="firstName" required>
+        <br>
+        <label for="lastName">Last Name:</label>
+        <input type="text" id="lastName" name="lastName" required>
+        <br>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        <br>
+        <label for="dateOfBirth">Date of Birth:</label>
+        <input type="date" id="dateOfBirth" name="dateOfBirth" required>
+        <br>
+        <button type="submit">Add User</button>
+    </form>
+
+    <table id="userTable">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Role</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Date of Birth</th>
+                <th>Username</th>
+                <th>Password</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Existing users go here -->
+        </tbody>
+    </table>
+
+</body>
+</html>

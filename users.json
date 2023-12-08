@@ -9,9 +9,9 @@
     "email": "blackkai@oregonstate.edu",
     "dateOfBirth": "2003-04-01",
     "preferredName": null,
-    "interests": null,
-    "hobbies": null,
-    "skills": null,
+    "interests": "Robotics",
+    "hobbies": "Fishing",
+    "skills": "Punching",
     "courses": []
   },
   {
@@ -24,8 +24,8 @@
     "email": "jane.smith@example.com",
     "dateOfBirth": "1980-05-15",
     "preferredName": null,
-    "interests": null,
-    "hobbies": null,
+    "interests": "Pottery",
+    "hobbies": "Teaching",
     "skills": null,
     "courses": [
       "S858"
@@ -40,6 +40,51 @@
     "id": "JW2544",
     "email": "admin@example.com",
     "dateOfBirth": "1975-10-30"
+  },
+  {
+    "role": "Student",
+    "firstName": "Paige",
+    "lastName": "Douglas",
+    "username": "douglaspaige",
+    "password": "l1ipzwj6yq",
+    "id": "PD8550",
+    "email": "douglaspaige@oregonstate.edu",
+    "dateOfBirth": "2002-02-02",
+    "preferredName": null,
+    "interests": null,
+    "hobbies": null,
+    "skills": null,
+    "courses": []
+  },
+  {
+    "role": "Student",
+    "firstName": "Payton",
+    "lastName": "Carter",
+    "username": "carterpayton",
+    "password": "612ia3mc1w",
+    "id": "PC4790",
+    "email": "carterpayton@oregonstate.edu",
+    "dateOfBirth": "2001-01-01",
+    "preferredName": null,
+    "interests": null,
+    "hobbies": null,
+    "skills": null,
+    "courses": []
+  },
+  {
+    "role": "Professor",
+    "firstName": "Samuel",
+    "lastName": "Rundel",
+    "username": "rundelsamuel",
+    "password": "d2ls5fttx4",
+    "id": "SR655",
+    "email": "rundelsamuel@example.com",
+    "dateOfBirth": "2001-01-01",
+    "preferredName": null,
+    "interests": null,
+    "hobbies": null,
+    "skills": null,
+    "courses": []
   },
   {
     "role": "Student",
@@ -68,7 +113,7 @@
     "email": "uniqueexample@osu.edu",
     "dateOfBirth": "1987-08-02",
     "preferredName": null,
-    "interests": null,
+    "interests": "Fishing",
     "hobbies": null,
     "skills": null,
     "courses": [

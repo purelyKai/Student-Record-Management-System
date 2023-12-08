@@ -1,0 +1,34 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../styles.css">
+        <link rel="stylesheet" href="ProfileSearch.css">
+        <script src="ProfileSearch.js"></script>
+        <title>Profile Search</title> 
+    </head>
+    <body onload="generateAccountLinks()">
+        <header>
+            <h1 class="site-title"><a>Profile Search</a></h1>
+            <div class="go-back-button-container">
+                <!-- Go back Button -->
+                <button type="button" id="go-back-button">Go back</button>
+            </div>
+        </header>
+
+        <input type="text" id="searchBar">
+        <button onclick="searchRefresh()">Search</button><br>
+
+        <div id="studentProfilesBox">
+            <p id="buttonHolder"></p> <!--Empty text box that holds student profiles-->
+        </div>
+        
+        <div>
+            <select name="Profile Type" id = "searchModifiers">
+                <option value = "Both">Both</option>
+                <option value = "Student">Student</option>
+                <option value = "Professor">Professor</option>
+            </select><br><br>
+        </div>
+    </body>
+</html>
