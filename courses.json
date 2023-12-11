@@ -19,6 +19,41 @@
     "attendanceRecords": {}
   },
   {
+    "courseName": "Intro to Databases",
+    "id": "I953",
+    "startDate": "2023-01-08",
+    "endDate": "2023-03-22",
+    "daysOfTheWeek": [
+      "Tuesday",
+      "Thursday"
+    ],
+    "startTime": "07:30 AM",
+    "endTime": "9:00 AM",
+    "optionalMeetingDate": null,
+    "optionalMeetingTime": null,
+    "professorID": "IJ7080",
+    "students": [],
+    "grades": {},
+    "attendanceRecords": {}
+  },
+  {
+    "courseName": "Pottery",
+    "id": "P787",
+    "startDate": "2023-01-08",
+    "endDate": "2023-03-22",
+    "daysOfTheWeek": [
+      "Monday"
+    ],
+    "startTime": "11:00 AM",
+    "endTime": "12:00 PM",
+    "optionalMeetingDate": null,
+    "optionalMeetingTime": null,
+    "professorID": "IJ7080",
+    "students": [],
+    "grades": {},
+    "attendanceRecords": {}
+  },
+  {
     "courseName": "Operating Systems",
     "id": "O93",
     "startDate": "2023-01-08",

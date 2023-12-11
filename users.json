@@ -9,9 +9,9 @@
     "email": "blackkai@oregonstate.edu",
     "dateOfBirth": "2003-04-01",
     "preferredName": null,
-    "interests": null,
-    "hobbies": null,
-    "skills": null,
+    "interests": "Robotics",
+    "hobbies": "Fishing",
+    "skills": "Punching",
     "courses": []
   },
   {
@@ -24,10 +24,12 @@
     "email": "jane.smith@example.com",
     "dateOfBirth": "1980-05-15",
     "preferredName": null,
-    "interests": null,
-    "hobbies": null,
+    "interests": "Pottery",
+    "hobbies": "Teaching",
     "skills": null,
-    "courses": []
+    "courses": [
+      "S858"
+    ]
   },
   {
     "role": "Administrator",
@@ -83,5 +85,40 @@
     "hobbies": null,
     "skills": null,
     "courses": []
+  },
+  {
+    "role": "Student",
+    "firstName": "Stew",
+    "lastName": "Dent",
+    "username": "1",
+    "password": "2",
+    "id": "SD8090",
+    "email": "Redsoxrox@yahoo.com",
+    "dateOfBirth": "2003-04-01",
+    "preferredName": null,
+    "interests": null,
+    "hobbies": null,
+    "skills": null,
+    "courses": [
+      "S858"
+    ]
+  },
+  {
+    "role": "Professor",
+    "firstName": "Indiana",
+    "lastName": "Jones",
+    "username": "3",
+    "password": "4",
+    "id": "IJ7080",
+    "email": "uniqueexample@osu.edu",
+    "dateOfBirth": "1987-08-02",
+    "preferredName": null,
+    "interests": "Fishing",
+    "hobbies": null,
+    "skills": null,
+    "courses": [
+      "I953",
+      "P787"
+    ]
   }
 ]
