@@ -156,7 +156,6 @@ function searchRefresh(){
 
 document.addEventListener('DOMContentLoaded', function () {
     const goBackButton = document.getElementById('go-back-button');
-    
 
     function ClickHome(){
         location.href="../Dashboard_Page/HomeScreen.html";
