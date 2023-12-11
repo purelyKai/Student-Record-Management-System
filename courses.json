@@ -107,5 +107,22 @@
     "students": [],
     "grades": {},
     "attendanceRecords": {}
+  },
+  {
+    "courseName": "A Course",
+    "id": "A70",
+    "startDate": "2023-01-01",
+    "endDate": "2023-03-03",
+    "daysOfTheWeek": [
+      "Sunday"
+    ],
+    "startTime": "10:00",
+    "endTime": "12:00",
+    "optionalMeetingDate": null,
+    "optionalMeetingTime": null,
+    "professorID": "JS8031",
+    "students": [],
+    "grades": {},
+    "attendanceRecords": {}
   }
 ]
