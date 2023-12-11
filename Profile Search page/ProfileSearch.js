@@ -6,9 +6,11 @@ const { readUsersFile } = require('../Class Implementations/Users');
 // Access the signed-in user
 const signedInUser = window.signedInUser;
 document.addEventListener('DOMContentLoaded', function () {
-    
+    goBackButton.addEventListener('click', function () {
+        // Go back to the previous page
+        history.back();
+    });
 });
-
 
 function generateAccountLinks(){
 //Generate buttons on search page linking to user accounts

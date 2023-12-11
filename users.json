@@ -120,5 +120,15 @@
       "I953",
       "P787"
     ]
+  },
+  {
+    "role": "Administrator",
+    "firstName": "5",
+    "lastName": "6",
+    "username": "65",
+    "password": "18n1ti0q95",
+    "id": "561983",
+    "email": "exampleAdmin@gmail.com",
+    "dateOfBirth": "1950-01-01"
   }
 ]
