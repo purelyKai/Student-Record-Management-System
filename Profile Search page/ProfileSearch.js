@@ -13,7 +13,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 });
 
-
 function generateAccountLinks(){
 //Generate buttons on search page linking to user accounts
 

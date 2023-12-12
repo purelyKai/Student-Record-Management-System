@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -16,6 +16,34 @@
             <button type="button" id="go-back-button">Go back</button>
         </div>
     </header>
+
+    <!-- Form for updating grade -->
+    <form id="updateGradeForm">
+        <label for="id">Student ID:</label>
+        <input type="text" id="id" name="id" required>
+        <br>
+        <label for="grade">Grade:</label>
+        <input type="text" id="grade" name="grade" required>
+        <br>
+        <label for="courseID">Course ID:</label>
+        <input type="text" id="courseID" name="courseID" required>
+        <br>
+        <button type="submit">Update Grade</button>
+    </form>
+
+    <table id="editGradesTable">
+        <thead>
+            <tr>
+                <th>Student ID</th>
+                <th>Student First Name</th>
+                <th>Student Last Name</th>
+                <th>Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- Existing users go here -->
+        </tbody>
+    </table>
 
 </body>
 </html>

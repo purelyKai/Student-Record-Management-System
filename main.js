@@ -115,31 +115,26 @@ ipcMain.on('create-course', (event, courseName, startDate, endDate, daysOfWeek, 
   courseManagement.addCourse(course);
 });
 
+// IPC event for updating grade 
+ipcMain.on('update-grade', (event, courseId, studentId, newGrade) => {
+  const courses = courseManagement.readCoursesFile(); // Assuming you have a function to read courses
+  const courseToUpdate = courses.find(course => course.id === courseId);
 
-// IPC event for user creation
-ipcMain.on('edit-user', (event, role, preferredName, hobbies, interests, skills) => {
-  const signedInId = localStorage.getItem("userPosition");
-  var updatedUser
+  if (courseToUpdate) {
+      courseToUpdate.grades[studentId] = newGrade;
 
-  switch (role.toLowerCase()) {
-    case "student":
-      updatedUser = new Student(role, preferredName, hobbies, interests, skills);
-      break;
-    case "professor":
-      updatedUser = new Professor(role, preferredName, hobbies, interests, skills);
-      break;
-    default:
-      console.error("Invalid role entered");
-      return;
+      courseManagement.saveCoursesToFile(courses);
   }
-
-  userManagement.editUser(getUsersAccounts()[signedInId], updatedUser);
 });
 
+// IPC event for updating attendance
+ipcMain.on('update-attendance', (event, courseId, studentId, newAttendance) => {
+  const courses = courseManagement.readCoursesFile(); // Assuming you have a function to read courses
+  const courseToUpdate = courses.find(course => course.id === courseId);
 
-/*
-// IPC event to read the users file
-ipcMain.handle('read-signed-in-user', (event) => {
-  return global.signedInUser;
+  if (courseToUpdate) {
+      courseToUpdate.attendanceRecords[studentId] = newAttendance;
+
+      courseManagement.saveCoursesToFile(courses);
+  }
 });
-*/

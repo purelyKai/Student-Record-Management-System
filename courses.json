@@ -13,7 +13,8 @@
     "endTime": "11:00 AM",
     "optionalMeetingDate": null,
     "optionalMeetingTime": null,
-    "students": [],
+    "professorID": "JS8031",
+    "students": ["KB9040"],
     "grades": {},
     "attendanceRecords": {},
     "professor": "JS8031"
@@ -34,7 +35,10 @@
     "students": [],
     "grades": {},
     "attendanceRecords": {},
-    "professor": "IJ7080"
+    "professorID": "IJ7080",
+    "students": ["KB9040"],
+    "grades": {"KB9040": "A"},
+    "attendanceRecords": {"KB9040": "P"}
   },
   {
     "courseName": "Pottery",
@@ -104,6 +108,23 @@
     "optionalMeetingDate": "2023-06-20",
     "optionalMeetingTime": "18:00",
     "professorID": "SR655",
+    "students": [],
+    "grades": {},
+    "attendanceRecords": {}
+  },
+  {
+    "courseName": "A Course",
+    "id": "A70",
+    "startDate": "2023-01-01",
+    "endDate": "2023-03-03",
+    "daysOfTheWeek": [
+      "Sunday"
+    ],
+    "startTime": "10:00",
+    "endTime": "12:00",
+    "optionalMeetingDate": null,
+    "optionalMeetingTime": null,
+    "professorID": "JS8031",
     "students": [],
     "grades": {},
     "attendanceRecords": {}
