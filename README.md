@@ -1,5 +1,5 @@
 # CS361-Scrum-Lords
-Kai Black, Rooney Ferguson, Paige Douglas, Abdulelah Alanazi, Payton Carter
+Kai Black, Paige Douglas, Payton Carter
 
 This project is a Student Record Management System desktop application using the ElectronJS framework with a Node.js runtime environment.
 
