@@ -114,3 +114,27 @@ ipcMain.on('create-course', (event, courseName, startDate, endDate, daysOfWeek, 
 
   courseManagement.addCourse(course);
 });
+
+// IPC event for updating grade 
+ipcMain.on('update-grade', (event, courseId, studentId, newGrade) => {
+  const courses = courseManagement.readCoursesFile(); // Assuming you have a function to read courses
+  const courseToUpdate = courses.find(course => course.id === courseId);
+
+  if (courseToUpdate) {
+      courseToUpdate.grades[studentId] = newGrade;
+
+      courseManagement.saveCoursesToFile(courses);
+  }
+});
+
+// IPC event for updating attendance
+ipcMain.on('update-attendance', (event, courseId, studentId, newAttendance) => {
+  const courses = courseManagement.readCoursesFile(); // Assuming you have a function to read courses
+  const courseToUpdate = courses.find(course => course.id === courseId);
+
+  if (courseToUpdate) {
+      courseToUpdate.attendanceRecords[studentId] = newAttendance;
+
+      courseManagement.saveCoursesToFile(courses);
+  }
+});
