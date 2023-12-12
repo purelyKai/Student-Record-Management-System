@@ -13,9 +13,116 @@
     "endTime": "11:00 AM",
     "optionalMeetingDate": null,
     "optionalMeetingTime": null,
+    "professorID": "JS8031",
     "students": [],
     "grades": {},
-    "attendanceRecords": {},
-    "professor": null
+    "attendanceRecords": {}
+  },
+  {
+    "courseName": "Intro to Databases",
+    "id": "I953",
+    "startDate": "2023-01-08",
+    "endDate": "2023-03-22",
+    "daysOfTheWeek": [
+      "Tuesday",
+      "Thursday"
+    ],
+    "startTime": "07:30 AM",
+    "endTime": "9:00 AM",
+    "optionalMeetingDate": null,
+    "optionalMeetingTime": null,
+    "professorID": "IJ7080",
+    "students": [],
+    "grades": {},
+    "attendanceRecords": {}
+  },
+  {
+    "courseName": "Pottery",
+    "id": "P787",
+    "startDate": "2023-01-08",
+    "endDate": "2023-03-22",
+    "daysOfTheWeek": [
+      "Monday"
+    ],
+    "startTime": "11:00 AM",
+    "endTime": "12:00 PM",
+    "optionalMeetingDate": null,
+    "optionalMeetingTime": null,
+    "professorID": "IJ7080",
+    "students": [],
+    "grades": {},
+    "attendanceRecords": {}
+  },
+  {
+    "courseName": "Operating Systems",
+    "id": "O93",
+    "startDate": "2023-01-08",
+    "endDate": "2023-03-22",
+    "daysOfTheWeek": [
+      "Monday",
+      "Wednesday"
+    ],
+    "startTime": "09:00 AM",
+    "endTime": "11:00 AM",
+    "optionalMeetingDate": null,
+    "optionalMeetingTime": null,
+    "professorID": "JS8031",
+    "students": [],
+    "grades": {},
+    "attendanceRecords": {}
+  },
+  {
+    "courseName": "Web Development",
+    "id": "W713",
+    "startDate": "2023-01-12",
+    "endDate": "2023-03-28",
+    "daysOfTheWeek": [
+      "Tuesday",
+      "Thursday"
+    ],
+    "startTime": "12:00",
+    "endTime": "14:00",
+    "optionalMeetingDate": null,
+    "optionalMeetingTime": null,
+    "professorID": "JS8031",
+    "students": [],
+    "grades": {},
+    "attendanceRecords": {}
+  },
+  {
+    "courseName": "Linear Algebra",
+    "id": "L588",
+    "startDate": "2023-04-02",
+    "endDate": "2023-06-22",
+    "daysOfTheWeek": [
+      "Tuesday",
+      "Thursday",
+      "Friday"
+    ],
+    "startTime": "10:00",
+    "endTime": "11:30",
+    "optionalMeetingDate": "2023-06-20",
+    "optionalMeetingTime": "18:00",
+    "professorID": "SR655",
+    "students": [],
+    "grades": {},
+    "attendanceRecords": {}
+  },
+  {
+    "courseName": "A Course",
+    "id": "A70",
+    "startDate": "2023-01-01",
+    "endDate": "2023-03-03",
+    "daysOfTheWeek": [
+      "Sunday"
+    ],
+    "startTime": "10:00",
+    "endTime": "12:00",
+    "optionalMeetingDate": null,
+    "optionalMeetingTime": null,
+    "professorID": "JS8031",
+    "students": [],
+    "grades": {},
+    "attendanceRecords": {}
   }
 ]

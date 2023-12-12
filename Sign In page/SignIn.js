@@ -1,3 +1,4 @@
+// Used to invoke functions in main process rather than renderer process
 const { ipcRenderer } = require('electron');
 
 // Sign in authentication
@@ -8,7 +9,8 @@ const authenticationResult = async (username, password) => {
   const foundUser = users.find(user => user.username === username);
 
   if (foundUser && foundUser.password === password) {
-    // Authentication successful
+    // Authentication successful, set signed in user
+    ipcRenderer.send('update-signed-in-user', foundUser);
     return { success: true, user: { ...foundUser } };
   } else {
     // Authentication failed
@@ -16,7 +18,15 @@ const authenticationResult = async (username, password) => {
   }
 };
 
+// Set signed in user to null
+const setSignedInUserToNull = () => {
+  ipcRenderer.send('update-signed-in-user', null);
+};
+
 document.addEventListener('DOMContentLoaded', function () {
+  // Set signed in user to null
+  setSignedInUserToNull();
+
   // Get reference to the form elements using their IDs
   var signInForm = document.getElementById('signInForm');
   var changePasswordForm = document.getElementById('changePasswordForm');

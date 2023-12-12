@@ -9,14 +9,20 @@ button {
 
 table {
     width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+table {
     border-collapse: collapse;
-    margin-bottom: 20px;
+    width: 100%;
 }
 
 th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 1px solid #dddddd;
     text-align: left;
+    padding: 8px;
 }
 
 th {

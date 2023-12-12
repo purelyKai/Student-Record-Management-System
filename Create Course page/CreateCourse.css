@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 /* #make-course-button {
     text-align: center;
     vertical-align: middle;
@@ -81,3 +82,34 @@ legend {
     cursor: pointer;
     margin-left: 10px;
 } */
+=======
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+button {
+    margin: 10px 10px;
+}
+
+form {
+    max-width: 250px;
+    margin: 10px auto;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+>>>>>>> main
