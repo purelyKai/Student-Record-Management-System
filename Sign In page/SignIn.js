@@ -1,5 +1,7 @@
 // Used to invoke functions in main process rather than renderer process
 const { ipcRenderer } = require('electron');
+const { readUsersFile } = require('../Class Implementations/Users');
+
 
 // Sign in authentication
 const authenticationResult = async (username, password) => {
@@ -17,6 +19,12 @@ const authenticationResult = async (username, password) => {
     return { success: false, message: 'Invalid username or password.' };
   }
 };
+
+function breakit(){
+  //global.signedInUser = "frog";
+  //var global.poopy = "doopy";
+  localStorage.setItem("frog", 1);
+}
 
 // Set signed in user to null
 const setSignedInUserToNull = () => {
@@ -58,6 +66,17 @@ document.addEventListener('DOMContentLoaded', function () {
     if (result.success) {
       const authenticatedUser = result.user;
       console.log('Authentication successful:', authenticatedUser);
+
+      localStorage.setItem("Username", username);
+
+      for (let i=0; i<readUsersFile().length; i++){
+        if (readUsersFile()[i].username == username){
+          localStorage.setItem("UserID", i);
+        }
+      }
+
+
+
       switch (authenticatedUser.role.toLowerCase()) {
         case 'student':
           window.location.href = '../Main Dashboard page/MainDashboardStudent.html';

@@ -20,6 +20,18 @@ function clickProf(StoredAccountValue){
 function generateCourseLinks(){
     //Display buttons for all courses linked to signed in user
 
+    const loggedInName = localStorage.getItem("Username");
+    for (let i=0; i<readUsersFile().length; i++){
+        if (readUsersFile()[i].username == loggedInName){
+          var userID = i;
+        }
+      }
+    localStorage.setItem("userPosition", userID);
+    console.log(userID);
+    console.log(readUsersFile()[userID].username);
+    console.log(readUsersFile()[userID].role);
+    console.log(readUsersFile()[userID].firstName);
+
     uservalue = 1; //temp value to identify user since I can't get the actual variable to work rn
     console.log("running Generate Course Links")
 
@@ -27,10 +39,10 @@ function generateCourseLinks(){
     for (let i = 0; i < readCoursesFile().length; i++) {
         //loop through all courses in database
         
-        for (let j=0; j < readUsersFile()[uservalue].courses.length; j++){
+        for (let j=0; j < readUsersFile()[userID].courses.length; j++){
             //loop through all courses under logged in user
  
-            if (readCoursesFile()[i].id == readUsersFile()[uservalue].courses[j]){
+            if (readCoursesFile()[i].id == readUsersFile()[userID].courses[j]){
                 //if the user has a course found in the database, we store that information and print it on a button
 
                 //console information

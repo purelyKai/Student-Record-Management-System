@@ -1,0 +1,1 @@
+var dog = "sheep" //This is global now

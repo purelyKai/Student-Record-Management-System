@@ -39,7 +39,7 @@ function generateAccountLinks(){
                                 " | " +
                                 accountsDisplayed[i].skills;
             accountButton.setAttribute("onClick", "clickProf(this.id)");
-            accountButton.id = "accountButtonId" + i; //Keeping this here because I think I'll use it for click actions later when necessary
+            accountButton.id = i; //Sets each button to a number. Easier to remember later
             //accountButton.id = "accountButtonId"
             document.getElementById("buttonHolder").appendChild(accountButton);
         }   
@@ -94,7 +94,7 @@ function filterAccounts(){
 function clickProf(clickedId){
 
     //alert(clickedId); //helping me create user page
-    localStorage.setItem("WetBlanket", readUsersFile()[1]);
+    localStorage.setItem("clickedAccountId", clickedId);
     //StoredAccountValue = 1; //placeholder so buttons will store their proper accounts
     location.href="../Profile Page/Profile.html"; 
 }
@@ -104,10 +104,10 @@ function searchRefresh(){
 //Delete button elements
 
     for (let i=0; i<readUsersFile().length; i++){
-        if(document.getElementById("accountButtonId" + i) != null){
+        if(document.getElementById(i) != null){
         //Prevents errors in the console when deleting buttons
 
-            var victim = document.getElementById("accountButtonId" + i);
+            var victim = document.getElementById(i);
             victim.remove();
             //location.reload();
         }
@@ -159,6 +159,7 @@ function searchRefresh(){
 
 document.addEventListener('DOMContentLoaded', function () {
     const goBackButton = document.getElementById('go-back-button');
+    
 
     function ClickHome(){
         location.href="../Dashboard_Page/HomeScreen.html";
