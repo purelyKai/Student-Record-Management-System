@@ -14,7 +14,7 @@
     "optionalMeetingDate": null,
     "optionalMeetingTime": null,
     "professorID": "JS8031",
-    "students": [],
+    "students": ["KB9040"],
     "grades": {},
     "attendanceRecords": {}
   },
@@ -32,9 +32,9 @@
     "optionalMeetingDate": null,
     "optionalMeetingTime": null,
     "professorID": "IJ7080",
-    "students": [],
-    "grades": {},
-    "attendanceRecords": {}
+    "students": ["KB9040"],
+    "grades": {"KB9040": "A"},
+    "attendanceRecords": {"KB9040": "P"}
   },
   {
     "courseName": "Pottery",
