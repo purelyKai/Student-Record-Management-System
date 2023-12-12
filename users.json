@@ -112,10 +112,10 @@
     "id": "IJ7080",
     "email": "uniqueexample@osu.edu",
     "dateOfBirth": "1987-08-02",
-    "preferredName": null,
-    "interests": "Fishing",
-    "hobbies": null,
-    "skills": null,
+    "preferredName": "Scrimbo",
+    "interests": "Pogs",
+    "hobbies": "Jumping Jacks",
+    "skills": "twirling hair cuteley",
     "courses": [
       "I953",
       "P787"

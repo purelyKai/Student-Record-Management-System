@@ -114,3 +114,32 @@ ipcMain.on('create-course', (event, courseName, startDate, endDate, daysOfWeek, 
 
   courseManagement.addCourse(course);
 });
+
+
+// IPC event for user creation
+ipcMain.on('edit-user', (event, role, preferredName, hobbies, interests, skills) => {
+  const signedInId = localStorage.getItem("userPosition");
+  var updatedUser
+
+  switch (role.toLowerCase()) {
+    case "student":
+      updatedUser = new Student(role, preferredName, hobbies, interests, skills);
+      break;
+    case "professor":
+      updatedUser = new Professor(role, preferredName, hobbies, interests, skills);
+      break;
+    default:
+      console.error("Invalid role entered");
+      return;
+  }
+
+  userManagement.editUser(getUsersAccounts()[signedInId], updatedUser);
+});
+
+
+/*
+// IPC event to read the users file
+ipcMain.handle('read-signed-in-user', (event) => {
+  return global.signedInUser;
+});
+*/

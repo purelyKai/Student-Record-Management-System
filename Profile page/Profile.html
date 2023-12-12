@@ -7,27 +7,41 @@
         <script src="Profile.js"></script>
         <title>Profile</title>
     </head>    
-    <body>
+    <body onload="checkProfileInformation()">
         <header>
             <h1 class="site-title"><a>Profile</a></h1>
             <div class="go-back-button-container">
                 <!-- Go back Button -->
                 <button type="button" id="go-back-button">Go back</button>
+                <div id = "edit-button"></div>
             </div>
         </header>
-
-        <div class="button-container">
-            <!-- Go back Button -->
-            <button type="button" id="go-back-button">Go back</button>
-        </div>
+        
 
         <!--<image src="../Images/pfp.png" id="pfp"></image>-->
         <div id="studentAccountInformation">
-            <h1>Student Name</h1>
+            <h1 id = "nameText">Student Name</h1>
+            <p id = "roleText">Role</p>
+
+            <h2>Skills:
+                <p id = "skillsText" class="subText"></p>
+            </h2>
+            <h2>Hobbies:
+                <p id = "hobbiesText" class="subText"></p>
+            </h2>
+            <h2>Interests:
+                <p id = "interestsText" class="subText"></p>
+            </h2>
             <!-- <p>Sid</p>
             <label for="sid">SID: </label>
             <input type="int" id="sid"><br><br> -->
         </div><br><br>
+
+        <div>Courses:
+            <p>
+
+            </p>
+        </div>
 
         <!-- <input></input> -->
     </body>

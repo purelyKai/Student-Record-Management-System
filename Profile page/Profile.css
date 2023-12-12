@@ -6,3 +6,7 @@ div#studentAccountInformation{
     float: right;
     width: 91%;
 }
+
+.subText{
+    size: 10%
+}

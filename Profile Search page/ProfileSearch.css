@@ -8,12 +8,37 @@ div#SearchModifiers{
     width: 50%;
 } */
 
-#searchBar {
-    padding: 10px;
-    margin: 10px 0;
+#searchbartop {
+    margin:auto;
+    vertical-align:middle;
+    margin-left:25%;
+    width:75%;
 }
- 
-select, input {
-    padding: 8px;
-    margin-bottom: 10px;
+#searchbartop input[type=text] {
+    width:70%;
+    padding-right: .5em;
+    display:block;
+    float:left;
+}
+#searchbartop input[type=button] {
+    width:20%;
+    display:block;
+     float:left;
+}
+
+input {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    display: block;
+    padding: 10px;
+    margin: 5px;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #333;
+    width: 100%
+}
+
+input:hover {
+    background-color: #ddd;
 }

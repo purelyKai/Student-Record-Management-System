@@ -13,10 +13,10 @@
     "endTime": "11:00 AM",
     "optionalMeetingDate": null,
     "optionalMeetingTime": null,
-    "professorID": "JS8031",
     "students": [],
     "grades": {},
-    "attendanceRecords": {}
+    "attendanceRecords": {},
+    "professor": "JS8031"
   },
   {
     "courseName": "Intro to Databases",
@@ -31,10 +31,10 @@
     "endTime": "9:00 AM",
     "optionalMeetingDate": null,
     "optionalMeetingTime": null,
-    "professorID": "IJ7080",
     "students": [],
     "grades": {},
-    "attendanceRecords": {}
+    "attendanceRecords": {},
+    "professor": "IJ7080"
   },
   {
     "courseName": "Pottery",
@@ -48,10 +48,10 @@
     "endTime": "12:00 PM",
     "optionalMeetingDate": null,
     "optionalMeetingTime": null,
-    "professorID": "IJ7080",
     "students": [],
     "grades": {},
-    "attendanceRecords": {}
+    "attendanceRecords": {},
+    "professor": "IJ7080"
   },
   {
     "courseName": "Operating Systems",

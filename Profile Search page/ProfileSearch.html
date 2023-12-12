@@ -16,8 +16,12 @@
             </div>
         </header>
 
-        <input type="text" id="searchBar">
-        <button onclick="searchRefresh()">Search</button><br>
+        <form id="searchbartop">
+            <input type="text" placeholder="Search..." id="searchBar"/>
+            <input type="button" value="Search" onclick="searchRefresh()"/>
+        </form>
+        <br>
+        <br>
 
         <div id="studentProfilesBox">
             <p id="buttonHolder"></p> <!--Empty text box that holds student profiles-->
