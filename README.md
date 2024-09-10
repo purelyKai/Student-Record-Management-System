@@ -28,8 +28,8 @@ Ensure you have the following installed:
 
 1. **Install dependencies**:
    ```bash
-   git clone https://github.com/your-username/Scrum-Lords-Student-Record-Management-System.git
-   cd Scrum-Lords-Student-Record-Management-System
+   git clone https://github.com/purelyKai/Student-Record-Management-System.git
+   cd Student-Record-Management-System
 2. **Clone the repository**:
    ```bash
    npm install
